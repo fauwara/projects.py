@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=7">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="description" content="This Webpage tells you if its Fawaz's( aka. Fauwara ) Birthday today">
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            isItFauwara'sBday
+        </title>
+
+        <!-- CSS for the Webpage -->
+        <style>
+            /* Adding the Gilroy font*/
+            @font-face {
+              font-family: gilroy;
+              src: url(Gilroy-Extrabold.otf);
+            }
+
+            /* The CSS to center the div */
+            /* Used Line-height property to center the text ( for more info: Google "How to center text veritcally using Line-height property")*/
+            #main{
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                font-size: 4rem;
+                font-family: gilroy;
+                line-height: 500px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <!-- The nginx code that is supposed to be here goes in here -->
+        <div id = "main">
+            {% if status %}
+                <strong>YEP! HappyBDay Fawaz!!</strong>
+            {% else %}
+                <strong>NO</strong>
+            {% endif %}
+        </div>
+
+        <script>
+            // the JavaScript that Helps in centering the div a little better
+            let box = document.getElementById('main');
+            let height = box.clientHeight;
+            // what i did here even though idk js so much made me so proud of my self man.
+            // at this point i legit feel like i can code anything if i just have google by my side
+            box.style.lineHeight = String(height+10)+"px";   
+        </script>
+
+    </body>
+</html>
